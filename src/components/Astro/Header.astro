@@ -1,0 +1,50 @@
+---
+import xpandSvg from "../../../public/img/xpandgroup.svg";
+import headerSvg from "../../../public/img/header.svg";
+
+const backgroundHeader = `url(${headerSvg.src})`;
+const backgroundHeight = headerSvg.height;
+---
+
+<section class="bg-header-blue h-auto font-grotesk">
+    <aside class="pt-8">
+        <img src={xpandSvg.src} alt="spand" width="175" class="m-auto" />
+    </aside>
+
+    <aside class="relative mb-3">
+        <img src={headerSvg.src} alt="header_svg" class="w-full h-auto" />
+        <p
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-grotesk font-medium text-center text-2xl text-slate-100 w-[75%] mx-auto pt-24 pb-10"
+        >
+            Eleva tu negocio al futuro con nuestras soluciones a medida
+        </p>
+    </aside>
+    <aside class="m-auto w-[70%]">
+        <p
+            class="font-grotesk font-thin leading-5 text-lg text-slate-100 text-center"
+        >
+            Adquiere una ventaja competitiva con una experiencia tecnológica
+            personalizada para tus clientes
+        </p>
+    </aside>
+    <aside class="py-5">
+        <aside class="m-auto w-[80%] h-40 rounded-lg bg-slate-300 shadow-md">
+        </aside>
+    </aside>
+
+    <aside class="py-5">
+        <aside class="m-auto w-[80%] rounded-full bg-header-lime shadow-md">
+            <p class="font-grotesk font-thin italic text-center py-3">
+                Da el primer paso ahora >
+            </p>
+        </aside>
+    </aside>
+</section>
+
+<style define:vars={{ backgroundHeader, backgroundHeight }}>
+    .header-img {
+        background-image: var(--backgroundHeader);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+</style>

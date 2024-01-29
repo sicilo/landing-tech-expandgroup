@@ -1,0 +1,89 @@
+---
+import Acordeon from "../React/Acordeon/Acordeon";
+import acordeonImg from "../../../public/img/acordeon_img.png";
+import type { AcordeonData } from "../React/Acordeon/Acordeon.interfaces";
+
+const items: AcordeonData[] = [
+    {
+        title: "Desarrollo de apps móviles",
+        img: acordeonImg,
+        imgTitle: "Conecta con el Mundo:",
+        imgDescription: "<Tu App Móvil, Tu Huella Digital>",
+        btnDetail: "Cotizar proyecto > ",
+    },
+    {
+        title: "Desarrollo de web y web apps",
+        img: acordeonImg,
+        imgTitle: "Conecta con el Mundo:",
+        imgDescription: "<Tu App Móvil, Tu Huella Digital>",
+        btnDetail: "Cotizar proyecto > ",
+    },
+    {
+        title: "Desarrollo de software a la medida",
+        img: acordeonImg,
+        imgTitle: "Conecta con el Mundo:",
+        imgDescription: "<Tu App Móvil, Tu Huella Digital>",
+        btnDetail: "Cotizar proyecto > ",
+    },
+    {
+        title: "Desarrollo de eCommerce",
+        img: acordeonImg,
+        imgTitle: "Conecta con el Mundo:",
+        imgDescription: "<Tu App Móvil, Tu Huella Digital>",
+        btnDetail: "Cotizar proyecto > ",
+    },
+    {
+        title: "Consultoría de datos",
+        img: acordeonImg,
+        imgTitle: "Conecta con el Mundo:",
+        imgDescription: "<Tu App Móvil, Tu Huella Digital>",
+        btnDetail: "Cotizar proyecto > ",
+    },
+    {
+        title: "Consultoría en I.A",
+        img: acordeonImg,
+        imgTitle: "Conecta con el Mundo:",
+        imgDescription: "<Tu App Móvil, Tu Huella Digital>",
+        btnDetail: "Cotizar proyecto > ",
+    },
+    {
+        title: "Internet of things (Iot)",
+        img: acordeonImg,
+        imgTitle: "Conecta con el Mundo:",
+        imgDescription: "<Tu App Móvil, Tu Huella Digital>",
+        btnDetail: "Cotizar proyecto > ",
+    },
+];
+---
+
+<section class="bg-solution">
+    <aside class="py-8 mx-4">
+        <p
+            class="font-grotesk font-semibold text-2xl leading-6 text-slate-100 w-[85%] mb-9"
+        >
+            Soluciones a medida, diseñadas especialmente para ti
+        </p>
+
+        {
+            items.map((item) => (
+                <Acordeon
+                    client:visible
+                    title={item.title}
+                    img={item.img}
+                    imgTitle={item.imgTitle}
+                    imgDescription={item.imgDescription}
+                    btnDetail={item.btnDetail}
+                />
+            ))
+        }
+
+        <hr class="border-1 border-header-lime my-4" />
+        <aside class="py-6">
+            <p
+                class="font-grotesk italic text-center rounded-full bg-header-lime py-3 shadow-md"
+            >
+                Descubre lo que Xpand tiene para ti >
+            </p>
+        </aside>
+    </aside>
+</section>
